@@ -22,8 +22,8 @@ steps:
 
   - name: Build APK
     run: |
-      chmod +x gradlew || true
       if [ -f gradlew ]; then
+        chmod +x gradlew
         ./gradlew assembleDebug
       else
         echo "Gradle wrapper missing"
